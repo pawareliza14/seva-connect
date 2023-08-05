@@ -1,0 +1,117 @@
+<!-- ******services -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SevaConnect Services</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: #000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 36px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+
+        main {
+            padding: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .service {
+            padding: 40px;
+            background-color: #111;
+            margin: 20px;
+            transition: transform 0.3s;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 300px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .service h2 {
+            margin: 0;
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+
+        .service img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            color: #fff;
+            font-size: 16px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 2px solid #FF00FF;
+            padding-bottom: 2px;
+        }
+
+        footer a:hover {
+            border-bottom-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SevaConnect Services</h1>
+    </header>
+
+    <main>
+        <section class="service" id="spa-treatment">
+            <img src="data:image/jpeg;base64,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" alt="Spa Treatment">
+           <a href="drop1.html"> <h2>Spa Treatment</h2></a>
+        </section>
+
+        <!-- <section class="service" id="electronics-repairments">
+            <img src="https://content.jdmagicbox.com/comp/agartala/y8/9999px381.x381.190911024522.u2y8/catalogue/om-electronics-and-refrigeration-agartala-bazar-agartala-ac-repair-and-services-daikin-n7fhg395tw.jpg?clr=" alt="Electronics Repairments">
+          <a href="drop2.html"></a>  <h2>Electronics Repairments</h2>
+        </section> -->
+
+        <section class="service" id="carpentry">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2020/9/PV/TZ/OU/12994991/residential-carpentry-work-500x500.jpg" alt="Carpentry">
+            <a href="drop2.html"> <h2>Carpentary</h2></a>
+        </section>
+
+        <section class="service" id="household-chores">
+            <img src="https://images.hindustantimes.com/rf/image_size_640x362/HT/p2/2016/02/21/Pictures/house-maids_944b0fea-d875-11e5-b369-6a1e536aef0c.JPG" alt="Household Chores">
+            <a href="drop3.html"> <h2>Household chores</h2></a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 SevaConnect Services. All rights reserved. | Made with <a href="https://www.neonwebstudio.com" target="_blank">Seva connect</a></p>
+    </footer>
+</body>
+</html>

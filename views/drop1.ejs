@@ -1,0 +1,194 @@
+<!-- ***spa  drop1.html -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spa Treatment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #f78bf8; /* Neon pink */
+            margin-bottom: 30px;
+        }
+
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .service {
+            background-color: #292929;
+            padding: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .service:hover {
+            background-color: #373737; /* Slightly lighter shade on hover */
+        }
+
+        .service h2 {
+            color: #f78bf8; /* Neon pink */
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            font-size: 18px;
+        }
+
+        .cart {
+            background-color: #292929;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 400px;
+            margin: 30px auto;
+        }
+
+        #cartItems div {
+            padding: 5px;
+            border-bottom: 1px solid #373737;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #cartItems div:last-child {
+            border-bottom: none;
+        }
+
+        button {
+            background-color: #00e676;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #00b248; /* Darker neon green on hover */
+        }
+
+        /* Neon Dark Theme */
+        .neon-text {
+            text-shadow: none; /* Removed the glowing effect */
+        }
+        .neon-button a{
+            color: white;
+        }
+       
+
+        /* Additional Professional Styling */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cart-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .total-amount {
+            font-size: 20px;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="neon-text">Spa Treatment Services</h1>
+        <div class="service-container">
+            <div class="service" id="manicure" onclick="addToCart('Manicure', 50)">
+                <h2 class="neon-text">Manicure</h2>
+                <p>Rate: Rs50</p>
+                <button class="neon-button">Add to Cart</button>
+            </div>
+            <div class="service" id="pedicure" onclick="addToCart('Pedicure', 50)">
+                <h2 class="neon-text">Pedicure</h2>
+                <p>Rate: Rs50</p>
+                <button class="neon-button">Add to Cart</button>
+            </div>
+            <div class="service" id="manicure" onclick="addToCart('Manicure', 50)">
+                <h2 class="neon-text">Threading </h2>
+                <p>Rate: Rs50</p>
+                <button class="neon-button">Add to Cart</button>
+            </div>
+            <!-- Add more service div elements here -->
+        </div>
+
+        <div class="cart">
+            <h2 class="cart-title neon-text">Cart</h2>
+            <div id="cartItems">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <div class="total-amount neon-text">
+                Total: Rs0
+            </div>
+            <!-- <button class="neon-button" onclick="clearCart()" >Clear Cart</button> -->
+
+        </div>
+        <button class="neon-button" >Take Reciept </button>
+        
+        <!-- <button class="neon-button" ><a href="service.html">add more service</a> </button> -->
+    </div>
+
+    <script>
+        // JavaScript functions for cart functionality
+        let cart = [];
+        let totalAmount = 0;
+
+        function addToCart(service, rate) {
+            cart.push({ service, rate });
+            totalAmount += rate;
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            cartItems.innerHTML = '';
+            cart.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.innerText = `${item.service} - Rs${item.rate}`;
+                cartItems.appendChild(cartItem);
+            });
+
+            const totalElement = document.querySelector('.total-amount');
+            totalElement.innerText = `Total: Rs${totalAmount}`;
+        }
+
+        function clearCart() {
+            cart = [];
+            totalAmount = 0;
+            updateCart();
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+<style>
+    
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color:#4a4646;
+}
+.section button{
+    height: 50px;
+    font-size: x-large;
+    background-color: #313235;
+    color: #fff;
+    /* border-radius: 0%; */
+  }
+  .button a{
+    color:white;
+  }
+h1 {
+    text-align: center;
+    color: white;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+input[type="file"] {
+    padding: 5px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #45a049;
+}
+
+input[type="file"]::before {
+    content: "Upload Photo";
+}
+
+input[type="file"]:hover::before {
+    content: "Choose a file";
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="file"]:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.success {
+    color: green;
+    font-size: 12px;
+}
+</style>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form action="/submit_registration" method="post">
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required><br>
+
+        <label for="current_address">Current Address:</label>
+        <input type="text" id="current_address" name="current_address" required><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required><br>
+
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required><br>
+
+        <label for="phone_number">Phone Number:</label>
+        <input type="tel" id="phone_number" name="phone_number" required><br>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="photo">Upload Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required><br>
+
+        <!-- <label for="services">Select the Services You Like:</label><br>
+        <input type="checkbox" id="parlour" name="services" value="parlour">
+        <label for="parlour">Parlour</label><br>
+        <input type="checkbox" id="carpentry" name="services" value="carpentry">
+        <label for="carpentry">Carpentry</label><br> -->
+
+        <label for="location">Share Your Location by Google Maps:</label><br>
+        <input type="text" id="location" name="location" required><br>
+        <div class="section">
+        <!-- <button onclick="document.location='index.html' "><b>Register</b></button> -->
+        <button type="button" class="button"><a href="index.html">Register</a></button>
+        </div>
+        <!-- <input type="submit" value="Submit"> -->
+    </form>
+</body>
+</html>

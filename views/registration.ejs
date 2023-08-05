@@ -1,0 +1,154 @@
+!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #2d3e50;
+      color: #fff;
+      margin: 0;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+
+    input[type="submit"] {
+      background-color: #2d3e50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #445566;
+    }
+
+    /* Additional styles for better organization */
+    h2 {
+      margin-top: 20px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section label {
+      margin-left: 5px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 600px) {
+      form {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Registration Form</h1>
+  <form id="registration" action="/register" method="post" enctype="multipart/form-data">
+    <div class="section">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required>
+    </div>
+
+    <div class="section">
+      <label for="currentAddress">Current Address:</label>
+      <input type="text" id="currentAddress" name="currentAddress" required>
+    </div>
+
+    <div class="section">
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required>
+    </div>
+
+    <div class="section">
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" required>
+    </div>
+
+    <div class="section">
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber" required>
+    </div>
+
+    <div class="section">
+      <label for="email">Email ID:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="section">
+      <label for="aadharNumber">aadhar Number:</label>
+      <input type="text" id="aadharNumber" name="aadharNumber" required>
+    </div>
+<!-- 
+    <div class="section">
+      <label for="panCardNumber">Pan Card Number:</label>
+      <input type="text" id="panCardNumber" name="panCardNumber" required>
+    </div> -->
+
+    <div class="section">
+      <label for="photo">Upload Photo:</label>
+      <input type="file" id="photo" name="photo" accept="image/*" required>
+    </div>
+
+    <h2>NGO Information</h2>
+    <div class="section">
+      <label for="ngoName">Name of NGO:</label>
+      <input type="text" id="ngoName" name="ngoName" required>
+    </div>
+
+    <div class="section">
+      <label for="ngoAddress">NGO Address:</label>
+      <input type="text" id="ngoAddress" name="ngoAddress" required>
+    </div>
+
+    <div class="section">
+      <label for="ngoLocation">NGO Location:</label>
+      <input type="text" id="ngoLocation" name="ngoLocation" required>
+    </div>
+
+    <div class="section">
+      <input type="submit" value="Register">
+    </div>
+  </form>
+</body>
+</html>
