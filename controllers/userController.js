@@ -1,12 +1,12 @@
 
 const User = require('../model/User');
+const sendEmail = require('./sendEmail');
 
 const signUpAsCustomer = async(req,res) => {
     try{
-        console.log("hello");
         const {fullName,address,city,state,phoneNumber,email} = req.body;
         const newUser = await User.create({fullName,address,city,state,phoneNumber,email});
-        console.log(newUser);
+        sendEmail(newUser.fullName, newUser.email);
         return res.status(201).json({msg:'User created succesfully'});
     }catch(err){
         return res.status(500).json({msg:'Some error occured'});

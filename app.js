@@ -3,6 +3,8 @@ const app = express()
 const bcrypt = require("bcrypt")
 const mongoose = require("mongoose")
 const router = require('./routes/userRoutes')
+const dotenv = require("dotenv");
+dotenv.config();
 
 const users = []
 const port = process.env.PORT || 5000;
@@ -38,7 +40,7 @@ app.get('*', (req,res) => {
 const start = async () => {
     try {
         mongoose.set('strictQuery',false);
-        await mongoose.connect("mongodb://0.0.0.0:27017/sevaConnect");
+        await mongoose.connect(process.env.MONGO_URI);
         console.log(`connected to database..`);
         app.listen((port), () => {
             console.log(`app is listening on port ${port}`);
