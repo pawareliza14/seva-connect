@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:whitesmoke;
+            color: black;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .profile-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .profile-header {
+            margin-bottom: 30px;
+        }
+        .profile-image {
+            max-width: 250px;
+            border-radius: 50%;
+            border: 5px solid #444;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            margin-bottom: 15px;
+        }
+        .username {
+            font-size: 28px;
+            margin-top: 15px;
+            color: black;
+        }
+        .services {
+            margin-top: 30px;
+        }
+        .services h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: black;
+        }
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .service-list li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #ddd;
+        }
+        .services-provided, .services-pending {
+            width: 50%;
+            float: left;
+        }
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-box">
+        <div class="profile-header">
+            <h1>Profile</h1>
+            <img src="profile-image.jpg" alt="Profile Image" class="profile-image">
+            <div class="username">
+                Username: JohnDoe
+            </div>
+        </div>
+        <div class="services">
+            <div class="services-provided">
+                <h2>Services Provided</h2>
+                <ul class="service-list">
+                    <li>Service A</li>
+                    <li>Service B</li>
+                    <li>Service C</li>
+                </ul>
+            </div>
+            <div class="services-pending">
+                <h2>Services Pending</h2>
+                <ul class="service-list">
+                    <li>Pending Service X</li>
+                    <li>Pending Service Y</li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+</html>
